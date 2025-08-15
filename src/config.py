@@ -15,6 +15,10 @@ load_dotenv(dotenv_path=PROJECT_ROOT / ".env")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 HTTP_PROXY = os.getenv("HTTP_PROXY", "").strip()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "").strip()
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini").strip()
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://127.0.0.1:11434").strip()
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.1:8b-instruct").strip()
 
 for directory in (DATA_DIR, RAW_DIR, PROCESSED_DIR):
     directory.mkdir(parents=True, exist_ok=True)
