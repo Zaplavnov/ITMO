@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.log
+
+.venv/
+venv/
+.env
+
+src/data/raw/
+src/data/processed/
+!src/data/raw/.gitkeep
+!src/data/processed/.gitkeep
+
+.vscode/
+.idea/
