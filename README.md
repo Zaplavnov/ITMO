@@ -23,7 +23,11 @@ powershell -ExecutionPolicy Bypass -File .\scripts\build_data.ps1
 ```
 
 3) Настроить переменные окружения:
-- Скопируйте `env.example` → `.env` и заполните `TELEGRAM_BOT_TOKEN` (токен вашего бота).
+- Скопируйте `env.example` → `.env` и заполните:
+  - `TELEGRAM_BOT_TOKEN` — токен вашего бота;
+  - для локальной модели Ollama: `OLLAMA_BASE_URL`, `OLLAMA_MODEL` (по умолчанию `gemma3:1b`);
+  - `USE_LLM=true|false` — включить/выключить генерацию ИИ (при `false` бот показывает сниппеты без LLM);
+  - при необходимости корпоративного прокси: `HTTP_PROXY`.
 
 4) Запуск бота:
 ```powershell
